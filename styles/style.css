@@ -44,4 +44,8 @@ a:hover {
  a:focus {
    transform: scale(1);
  }
-
+.purple{
+   background:var(--highlight-secondary);
+   color:var(--secondary);
+   border:var(--secondary);
+}
