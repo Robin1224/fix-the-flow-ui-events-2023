@@ -1,5 +1,5 @@
 
-# Connect Your Tribe - UI EVents
+# Connect Your Tribe - UI Events
 
 Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-press en Device-motion
 
