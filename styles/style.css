@@ -1,66 +1,47 @@
 /* --global-- */
 :root {
-	--primary: #fff;
-	--secondary: #050840;
-	--highlight-primary:#7ce7c9;
-	--highlight-secondary: #9d7beb;
-   	--radius:.5rem;
-    --pill: 2rem;
+   --primary: #fff;
+   --secondary: #050840;
+   --highlight-primary:#7ce7c9;
+   --highlight-secondary: #9d7beb;
+   --radius:.5rem;
+   --pill: 2rem;
 }
 * {
-	box-sizing: border-box;
+   box-sizing: border-box;
 }
 body{
-    margin: 2rem; 
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 2.8rem;
-    background: var(--secondary);
-    color: var(--primary);
+   margin: 2rem; 
+   padding: 0;
+   font-family: "Open Sans", sans-serif;
+   font-size: 2.8rem;
+   background: var(--secondary);
+   color: var(--primary);
 }
 section{
-    /* background: pink; */
-    max-width: 90vw;
+   max-width: 90vw;
 }
 
 /* 
-    Button dingen
+   Button dingen
 */
 a {
-    display: inline-block;
-    margin: .2em;
-    padding: .4em 0.8em;
-    background:var(--secondary);
-    color: var(--highlight-primary);
-    border: 1px solid var(--highlight-primary);
-    border-radius: var(--pill);
-    font-weight: normal;
-    text-decoration: none;
-    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+   display: inline-block;
+   margin: .2em;
+   padding: .4em 0.8em;
+   background:var(--secondary);
+   color: var(--highlight-primary);
+   border: 1px solid var(--highlight-primary);
+   border-radius: var(--pill);
+   font-weight: normal;
+   text-decoration: none;
+   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 a:hover {
-    transform: scale(0.8);
-    /* margin: 1rem; */
+   transform: scale(0.8);
+   /* margin: 1rem; */
  }
  a:focus {
-    transform: scale(1);
+   transform: scale(1);
  }
 
- /*
-    KEUREN
- */
- .purple{
-     background: var(--highlight-secondary);
-     color: var(--secondary);
-     border: var(--secondary);
- }
- .green{
-    background: var(--highlight-primary);
-    color: var(--secondary);
-    border: var(--secondary);
-}
- .highlight{
-    background: gold;
-    color: var(--secondary);
-    border: var(--secondary);
- }
