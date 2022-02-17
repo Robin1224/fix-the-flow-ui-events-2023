@@ -39,6 +39,8 @@ Shake – allemaal een andere kleur geven
 
 #### Materiaal bouwfase
 
+- [MDN Events](https://developer.mozilla.org/en-US/docs/Web/API/Element#events)
+
 AddEventListener bron 
     
 Javascript events https://developer.mozilla.org/en-US/docs/Web/API/Element#events
