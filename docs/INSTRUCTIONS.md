@@ -17,35 +17,38 @@ Leren hoe je verschillende User Interface Events kan gebruiken in je Javascript 
 
 Opdracht: Verschillende User Interface events uitproberen.
 
+![image](https://user-images.githubusercontent.com/1391509/154582312-a132a128-d42e-4b0e-b1ec-2e3ed696642d.png)
+
 Deze opdracht gaat over de [bouwen](#bouwen) fase van de DLC
-
-
 
 ### Bouwen
 
-Click oefening – kleur veranderen
-Double-click oefening - andere kleur veranderen
-Key-Down oefening – aantal van kleur laten veranderen
-Long-press oefening – kleur terug veranderen
-Shake – allemaal een andere kleur geven
+1. Gebruik de eventListener met een “click” event om de kleur van de knoppen te veranderen. 
+2. Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
+3. Gebruik het “keydown” event om kleuren van knoppen te veranderen.
+4. Probeer een “Long press” event te maken om een kleur aan te passen.
+5. Kun je met het “DeviceMotionEvent” de kleur van knoppen veranderen?
 
 
 <details>
 <summary>Aanpak</summary>
 
-1. {geef de stappen}
-2. {die in deze fase}
-3. {doorlopen worden}
+1. Fork deze deeltaak en clone het naar je laptop
+4. Schets de pagina en maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
+3. Selecteer de juiste elementen uit de DOM met de _querySelector_
+4. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
+5. Gebruik de classList in JS om een andere class aan een element te 
+6. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
 
-#### Materiaal bouwfase
+#### Materiaal
 
-- [MDN Events](https://developer.mozilla.org/en-US/docs/Web/API/Element#events)
+- [MDN Mouse events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events)
+- [MDN Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/Element#keyboard_events)
+- [MDN DeviceMotionEvent - experimental](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
 
-AddEventListener bron 
-    
-Javascript events https://developer.mozilla.org/en-US/docs/Web/API/Element#events
-    
- Opsplitsen in Click, Double-click, Key-down, Long-press Mousedonw, mouseup, Shake Device motion etc?
+- Tutorial microinteractions met querySelector, addEvenlistener en classList [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
+- [ClassList]https://developer.mozilla.org/en-US/docs/Web/API/Element/classList()
+- [QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
 </details>
 
