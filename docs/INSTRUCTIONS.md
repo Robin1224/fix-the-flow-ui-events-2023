@@ -15,7 +15,7 @@ Leren hoe je verschillende User Interface Events kan gebruiken in je Javascript 
 
 ## Werkwijze
 
-Opdracht: Verschillende Events gebruiken
+Opdracht: Verschillende User Interface events uitproberen.
 
 Deze opdracht gaat over de [bouwen](#bouwen) fase van de DLC
 
