@@ -33,11 +33,11 @@ Deze opdracht gaat over de [bouwen](#bouwen) fase van de DLC
 <details>
 <summary>Aanpak</summary>
 
-1. Fork deze deeltaak en clone het naar je laptop
+1. Fork deze deeltaak en clone de code naar je laptop
 4. Schets de pagina en maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
 3. Selecteer de juiste elementen uit de DOM met de _querySelector_
 4. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
-5. Gebruik de classList in JS om een andere class aan een element te 
+5. Gebruik de _classList_ in JS om een andere class aan een element te 
 6. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
 
 #### Materiaal
