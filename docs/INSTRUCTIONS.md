@@ -1,7 +1,7 @@
 
 # Connect Your Tribe - UI Events
 
-Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-press en Device-motion
+Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-press en Device-motion.
 
 ## Context
 
@@ -15,13 +15,15 @@ Leren hoe je verschillende User Interface Events kan gebruiken in je Javascript 
 
 ## Werkwijze
 
-Opdracht: Verschillende User Interface events uitproberen.
+Opdracht: Experimenteer met User Interface Events
 
-![image](https://user-images.githubusercontent.com/1391509/154582312-a132a128-d42e-4b0e-b1ec-2e3ed696642d.png)
+![image](https://user-images.githubusercontent.com/1391509/154644647-287da7f0-cdad-4966-ac48-d5ef9cc8b5af.png)
 
-Deze opdracht gaat over de [bouwen](#bouwen) fase van de DLC
+Deze opdracht gaat over de [ontwerp](#ontwerpen-en-bouwen) en [bouw](#ontwerpen-en-bouwen) fase van de DLC
 
-### Bouwen
+### Ontwerpen en bouwen
+
+Ontwerp en maak een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
 1. Gebruik de eventListener met een “click” event om de kleur van de knoppen te veranderen. 
 2. Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
@@ -34,11 +36,12 @@ Deze opdracht gaat over de [bouwen](#bouwen) fase van de DLC
 <summary>Aanpak</summary>
 
 1. Fork deze deeltaak en clone de code naar je laptop
-4. Schets de pagina en maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
-3. Selecteer de juiste elementen uit de DOM met de _querySelector_
-4. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
-5. Gebruik de _classList_ in JS om een andere class aan een element te 
-6. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
+2. Schets de pagina met goede labels, bedenk hoe je de gebruiker feedback / feedforward kunt geven
+4. maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
+5. Selecteer de juiste elementen uit de DOM met de _querySelector_
+6. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
+7. Gebruik de _classList_ in JS om een andere class aan een element te 
+8. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
 
 #### Materiaal
 
