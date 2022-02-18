@@ -28,7 +28,7 @@ Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor
 1. Gebruik de eventListener met een “click” event om de kleur van de knoppen te veranderen. 
 2. Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
 3. Gebruik het “keydown” event om kleuren van knoppen te veranderen.
-4. Probeer een “Long press” event om een kleur aan te passen.
+4. Probeer een “Long press” event te maken om een kleur aan te passen.
 5. Kun je met het “DeviceMotionEvent” de kleur van knoppen veranderen?
 
 
