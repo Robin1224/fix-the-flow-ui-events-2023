@@ -23,7 +23,7 @@ Deze opdracht gaat over de [ontwerp](#ontwerpen-en-bouwen) en [bouw](#ontwerpen-
 
 ### Ontwerpen en bouwen
 
-Ontwerp en maak een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
+Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
 1. Gebruik de eventListener met een “click” event om de kleur van de knoppen te veranderen. 
 2. Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
