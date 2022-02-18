@@ -49,7 +49,7 @@ Ontwerp en maak een User-Interface voor verschillende gebruikersinput. Zorg voor
 - [MDN Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/Element#keyboard_events)
 - [MDN DeviceMotionEvent - experimental](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
 - Tutorial microinteractions met querySelector, addEvenlistener en classList [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
-- [ClassList]https://developer.mozilla.org/en-US/docs/Web/API/Element/classList()
+- [ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 - [QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
 </details>
