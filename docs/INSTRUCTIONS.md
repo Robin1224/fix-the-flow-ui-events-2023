@@ -40,7 +40,7 @@ Ontwerp en maak een User-Interface voor verschillende gebruikersinput. Zorg voor
 4. maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
 5. Selecteer de juiste elementen uit de DOM met de _querySelector_
 6. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
-7. Gebruik de _classList_ in JS om een andere class aan een element te 
+7. Gebruik de _classList_ in JS om een andere class aan een element toe te voegen
 8. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
 
 #### Materiaal
