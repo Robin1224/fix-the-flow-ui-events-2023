@@ -45,12 +45,16 @@ Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor
 
 #### Materiaal
 
+- Tutorial microinteractions met querySelector, addEvenlistener en classList [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
+
+- [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) 
+  
 - [MDN Mouse events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events)
 - [MDN Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/Element#keyboard_events)
 - [MDN DeviceMotionEvent - experimental](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
-- Tutorial microinteractions met querySelector, addEvenlistener en classList [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
-- [ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
-- [QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
 
 </details>
 
