@@ -5,7 +5,7 @@ Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-pre
 
 ## Context
 
-Deze leertaak hoort bij sprint 7 "Connect Your Tribe". Dit is een deeltaak die je individueel uitvoert as experiment.
+Deze leertaak hoort bij sprint 5 "Fix the Flow". Dit is een deeltaak die je individueel uitvoert als experiment.
 
 In het college S07W2 - UI-Principles worden User Interface Principles behandeld en hoe je die met Javascript kan toepassen. 
 
