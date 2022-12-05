@@ -62,14 +62,14 @@ Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor
 
 ## Criteria
 
-Focus sprint 7 - De focus in deze sprint ligt op team building, samenwerken en hoe je een dynamische website kan maken waar bezoekers ook iets achter kunnen laten.	Het doel van deze sprint is binding tussen studenten creeeren. Met deze squad ga je het doen! Samen studeren, leren en elkaar helpen. En iets gezamenlijks maken met een database dingen. Een sneak peak naar de rest van het semester.
+Focus sprint 5 - De focus van deze sprint ligt op interactie en informatie architectuur van een website.
 
-Deze leertaak hoort bij het gedragscriterium:
+Deze deeltaak hoort bij het gedragscriterium:
 
-M: Je combineert aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving.
+Methodisch handelen: Student past aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving toe.
 
 Deze opdracht is done als:
 
 - [ ] Je hebt 1 of meerdere experimenten gedaan
-- [ ] De code is per experminent gedocumenteerd in de Readme van de leertaak
+- [ ] De code is per experminent gedocumenteerd in de Wiki
 
