@@ -7,7 +7,7 @@ Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-pre
 
 Deze leertaak hoort bij sprint 5 "Fix the Flow". Dit is een deeltaak die je individueel uitvoert als experiment.
 
-In het college S07W2 - UI-Principles worden User Interface Principles behandeld en hoe je die met Javascript kan toepassen. 
+In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd. 
 
 ## Doel van deze opdracht
 
