@@ -36,11 +36,11 @@ a {
    text-decoration: none;
 }
 a:hover {
-   color: color: var(--primary);
-   border: color: var(--primary);
+   color: var(--primary);
+   border: var(--primary);
 }
 .purple{
-   background:var(--highlight-secondary);
-   color:var(--secondary);
-   border:var(--secondary);
+   background: var(--highlight-secondary);
+   color: var(--secondary);
+   border: var(--secondary);
 }
