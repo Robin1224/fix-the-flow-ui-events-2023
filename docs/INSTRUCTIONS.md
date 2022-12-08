@@ -70,6 +70,6 @@ Methodisch handelen: Student past aangeboden principes en conventies op het gebi
 
 Deze opdracht is done als:
 
-- [ ] Je hebt 1 of meerdere experimenten gedaan
-- [ ] De code is per experminent gedocumenteerd in de Wiki
+- [ ] Je hebt meerdere experimenten gedaan
+- [ ] Per experminent heb jde de code in eigen woorden uitgelegd (in de Wiki)
 
