@@ -38,10 +38,10 @@ a {
 }
 a:hover {
    color: var(--primary);
-   border: var(--primary);
+   border-color: var(--primary);
 }
 .purple{
    background: var(--highlight-secondary);
    color: var(--secondary);
-   border: var(--secondary);
+   border-color: var(--secondary);
 }
