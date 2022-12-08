@@ -6,6 +6,7 @@
    --highlight-secondary: #9d7beb;
    --radius:.5rem;
    --pill: 2rem;
+   --line: 0.1rem;
 }
 * {
    box-sizing: border-box;
@@ -30,7 +31,7 @@ a {
    padding: .4em 0.8em;
    background:var(--secondary);
    color: var(--highlight-primary);
-   border: 1px solid var(--highlight-primary);
+   border: var(--line) solid var(--highlight-primary);
    border-radius: var(--pill);
    font-weight: normal;
    text-decoration: none;
