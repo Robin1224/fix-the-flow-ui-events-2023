@@ -16,7 +16,6 @@ body{
    font-family: "Open Sans", sans-serif;
    font-size: 2rem;
    background: var(--secondary);
-   color: var(--primary);
 }
 section{
    max-width: 90vw;
@@ -35,15 +34,11 @@ a {
    border-radius: var(--pill);
    font-weight: normal;
    text-decoration: none;
-   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 a:hover {
-   transform: scale(0.8);
-   /* margin: 1rem; */
- }
- a:focus {
-   transform: scale(1);
- }
+   color: color: var(--primary);
+   border: color: var(--primary);
+}
 .purple{
    background:var(--highlight-secondary);
    color:var(--secondary);
