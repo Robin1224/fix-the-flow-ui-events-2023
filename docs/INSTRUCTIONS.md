@@ -5,7 +5,7 @@ Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-pre
 
 ## Context
 
-Deze leertaak hoort bij sprint 5 "Fix the Flow". Dit is een deeltaak die je individueel uitvoert als experiment.
+Deze deeltaak hoort bij sprint 5 "Fix the Flow". Dit is een deeltaak die je individueel uitvoert als experiment.
 
 In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd. 
 
