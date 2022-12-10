@@ -11,7 +11,7 @@ In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd.
 
 ## Doel van deze opdracht
 
-Leren hoe je verschillende User Interface Events kan gebruiken in je Javascript code.
+Je leert hoe je verschillende User Interface Events kan gebruiken met Javascript.
 
 ## Werkwijze
 
@@ -25,11 +25,13 @@ Deze opdracht gaat over de [ontwerp](#ontwerpen-en-bouwen) en [bouw](#ontwerpen-
 
 Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
-1. Gebruik de eventListener met een “click” event om de kleur van de knoppen te veranderen. 
-2. Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
-3. Gebruik het “keydown” event om kleuren van knoppen te veranderen.
-4. Probeer een “Long press” event te maken om een kleur aan te passen.
-5. Kun je met het “DeviceMotionEvent” de kleur van knoppen veranderen?
+Probeer een aantal van onderstaande experimenten te maken:
+
+* Gebruik de _eventListener_ met een “click” event om de kleur van de knoppen te veranderen. 
+* Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
+* Gebruik het “keydown” event om kleuren van knoppen te veranderen.
+* Probeer een “Long press” event te maken om een kleur aan te passen.
+* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen?
 
 
 <details>
@@ -37,7 +39,7 @@ Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor
 
 1. Fork deze deeltaak en clone de code naar je laptop
 2. Schets de pagina met goede labels, bedenk hoe je de gebruiker feedback / feedforward kunt geven
-4. maak een breakdown-schets waarin je bedenkt welke HTML, CSS and JS je nodig hebt.
+4. Maak een breakdown-schets waarin je bedenkt welke JS en CSS je nodig hebt.
 5. Selecteer de juiste elementen uit de DOM met de _querySelector_
 6. Gebruik de _addEventListener_ in JS om een event aan een element te koppelen
 7. Gebruik de _classList_ in JS om een andere class aan een element toe te voegen
@@ -64,12 +66,16 @@ Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor
 
 Focus sprint 5 - De focus van deze sprint ligt op interactie en informatie architectuur van een website.
 
+Doel van deze opdracht:
+
+* Je leert hoe je verschillende User Interface Events kan gebruiken met Javascript.
+
 Deze deeltaak hoort bij het gedragscriterium:
 
-Methodisch handelen: Student past aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving toe.
+* Methodisch handelen: Student past aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving toe.
 
 Deze opdracht is done als:
 
 - [ ] Je hebt meerdere experimenten gedaan
-- [ ] Per experminent heb jde de code in eigen woorden uitgelegd (in de Wiki)
+- [ ] Per experminent heb je de JS en CSS code in eigen woorden uitgelegd (in de Wiki)
 
