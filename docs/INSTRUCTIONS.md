@@ -19,10 +19,6 @@ Opdracht: Experimenteer met User Interface Events
 
 ![image](https://user-images.githubusercontent.com/1391509/154644647-287da7f0-cdad-4966-ac48-d5ef9cc8b5af.png)
 
-Deze opdracht gaat over de [ontwerp](#ontwerpen-en-bouwen) en [bouw](#ontwerpen-en-bouwen) fase van de DLC
-
-### Ontwerpen en bouwen
-
 Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
 Probeer een aantal van onderstaande experimenten te maken:
@@ -34,8 +30,7 @@ Probeer een aantal van onderstaande experimenten te maken:
 * Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen?
 
 
-<details>
-<summary>Aanpak</summary>
+## Aanpak
 
 1. Fork deze deeltaak en clone de code naar je laptop
 2. Schets de pagina met goede labels, bedenk hoe je de gebruiker feedback / feedforward kunt geven
@@ -45,7 +40,7 @@ Probeer een aantal van onderstaande experimenten te maken:
 7. Gebruik de _classList_ in JS om een andere class aan een element toe te voegen
 8. TIP: Test stap-voor-stap of je de goede dingen doet met console.log()
 
-#### Materiaal
+### Materiaal
 
 - Tutorial microinteractions met querySelector, addEvenlistener en classList [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
 
@@ -56,10 +51,6 @@ Probeer een aantal van onderstaande experimenten te maken:
 - [MDN Mouse events](https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events)
 - [MDN Keyboard events](https://developer.mozilla.org/en-US/docs/Web/API/Element#keyboard_events)
 - [MDN DeviceMotionEvent - experimental](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
-
-
-</details>
-
 
 
 ## Criteria
