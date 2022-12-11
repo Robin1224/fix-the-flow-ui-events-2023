@@ -19,7 +19,7 @@ Opdracht: Experimenteer met User Interface Events
 
 ![image](https://user-images.githubusercontent.com/1391509/154644647-287da7f0-cdad-4966-ac48-d5ef9cc8b5af.png)
 
-Ontwerp en bouw een User-Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
+Ontwerp en bouw een User Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
 Probeer een aantal van onderstaande experimenten te maken:
 
@@ -27,7 +27,7 @@ Probeer een aantal van onderstaande experimenten te maken:
 * Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
 * Gebruik het “keydown” event om kleuren van knoppen te veranderen.
 * Probeer een “Long press” event te maken om een kleur aan te passen.
-* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen?
+* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen? Bijvoorbeeld Device-motion? Of een ander User Interface Event?
 
 
 ## Aanpak
@@ -68,5 +68,5 @@ Deze deeltaak hoort bij het gedragscriterium:
 Deze opdracht is done als:
 
 - [ ] Je hebt meerdere experimenten gedaan
-- [ ] Per experminent heb je de JS en CSS code in eigen woorden uitgelegd (in de Wiki)
+- [ ] Per experiment heb je de JS en CSS code in eigen woorden uitgelegd
 
