@@ -1,7 +1,7 @@
 
 # Fix the Flow - UI Events
 
-Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-press en Device-motion.
+Experimenteer met User Interface Events. Click, Double-click, Key-down, Long-press en Devicemotion.
 
 ## Context
 
@@ -27,7 +27,7 @@ Probeer een aantal van onderstaande experimenten te maken:
 * Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
 * Gebruik het “keydown” event om kleuren van knoppen te veranderen.
 * Probeer een “Long press” event te maken om een kleur aan te passen.
-* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen? Bijvoorbeeld Device-motion? Of een ander User Interface Event?
+* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen? Bijvoorbeeld "Devicemotion"? Of "Drag and drop"?
 
 
 ## Aanpak
