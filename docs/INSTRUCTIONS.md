@@ -15,9 +15,7 @@ Je leert hoe je verschillende User Interface Events kan gebruiken met Javascript
 
 ## Werkwijze
 
-Opdracht: Experimenteer met User Interface Events
-
-![image](https://user-images.githubusercontent.com/1391509/154644647-287da7f0-cdad-4966-ac48-d5ef9cc8b5af.png)
+Opdracht: Experimenteer met User Interface Events.
 
 Ontwerp en bouw een User Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
 
