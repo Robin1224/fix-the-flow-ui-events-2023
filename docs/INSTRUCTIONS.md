@@ -105,13 +105,13 @@ Test in een browser of de versie die je net online gezet hebt ook via GitHub pag
 
 Focus sprint 5 - De focus van deze sprint ligt op interactie en informatie architectuur van een website.
 
-Doel van deze opdracht:
-
-* Je leert hoe je verschillende User Interface Events kan gebruiken met Javascript.
-
 Deze deeltaak hoort bij het gedragscriterium:
 
 * Methodisch handelen: Student past aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving toe.
+
+Doel van deze opdracht:
+
+* Je leert hoe je verschillende User Interface Events kan gebruiken met Javascript.
 
 Deze opdracht is done als:
 
