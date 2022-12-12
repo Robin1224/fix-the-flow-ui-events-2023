@@ -46,13 +46,12 @@ Je onderzoekt kort welke interactie je nu gaat maken en denkt alvast na over hoe
 
 ### Ontwerpen
 
-Maak een snelle schets welke je gebruikt om de interactie te implementeren.
+Onderzoek hoe je de interactie zou kunnen maken met CSS en Javascript. Als je helemaal zonder ideeën zit kunnen onderstaande bronnen helpen.
 
 #### Aanpak
 
-1. Onderzoek hoe je de interactie zou kunnen maken met CSS en Javascript. Als je helemaal zonder ideeën zit kunnen onderstaande bronnen helpen.
-2. Schets de interactie met goede labels, bedenk hoe je de gebruiker feedback / feedforward kunt geven
-3. Maak een breakdown-schets waarin je bedenkt welke JS en CSS je nodig hebt.
+1. Maak eerst een snelle schets van de interactie en feedback/forward die je de gebruiker wilt geven;
+3. Maak een breakdown om te onderzoeken welke JS en CSS je nodig hebt.
 
 #### Materiaal
 
@@ -93,20 +92,14 @@ Neem in je wiki een direct linkje naar de betreffende layout op.
 
 ### Testen
 
+Test in een browser of de versie die je net online gezet hebt ook via GitHub pages werkt.
+
 #### Aanpak
 
-Opdracht: Experimenteer met User Interface Events.
-
-Ontwerp en bouw een User Interface voor verschillende gebruikersinput. Zorg voor goede feedback / feedforward en labels zodat een gebruiker weet wat er mogelijk is …
-
-Probeer een aantal van onderstaande experimenten te maken:
-
-* Gebruik de _eventListener_ met een “click” event om de kleur van de knoppen te veranderen. 
-* Gebruik een “dubbel click” event om de kleur van de knoppen te veranderen. 
-* Gebruik het “keydown” event om kleuren van knoppen te veranderen.
-* Probeer een “Long press” event te maken om een kleur aan te passen.
-* Kun je nog een ander _Event_ gebruiken om de de kleur van knoppen veranderen? Bijvoorbeeld "Devicemotion"? Of "Drag and drop"?
-
+1. Open jouw repository via de directe link;
+2. Check of alles werkt;
+3. Vergelijk jouw implementatie even met een klasgenoot;
+4. Schrijf heel kort op wat je opviel bij het testen.
 
 ## Criteria
 
@@ -125,6 +118,7 @@ Deze opdracht is done als:
 - [ ] Je hebt minstens tien interactie experimenten in code geïmplementeerd;
 - [ ] Alle schetsen voor interacties zijn opgenomen in je wiki;
 - [ ] Bij elke schets staat een korte beschrijving van de interactie;
+- [ ]  Bij elke schets staat een korte uitleg hoe je code werkt (let op: wees zuinig met codevoorbeelden).
 - [ ] Je werk is te bekijken via GitHub pages;
 
 (extra credits!)
