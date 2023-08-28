@@ -10,3 +10,7 @@
 ## Experimenten
 <!-- In de Experimenten beschrijf je wat je per experimnet hebt gedaan en documenteer je de code aan de hand van voorbeelden -->
 <!-- Voeg een mooie poster visual toe 📸 per experiment -->
+
+## Licentie
+
+This project is licensed under the terms of the [MIT license](./LICENSE).
