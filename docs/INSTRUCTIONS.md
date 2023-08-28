@@ -9,6 +9,9 @@ Deze deeltaak hoort bij sprint 5 Fix the Flow. Dit is een deeltaak die je indivi
 
 In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd.
 
+Deze deeltaak hoort bij de leertaak:
+- [Fix the flow - Interactive website](https://github.com/fdnd-task/fix-the-flow-interactive-website)
+
 ## Doel van deze opdracht
 
 Op websites zijn veel verschillende vormen van interactie met gebruikers mogelijk. Deze worden *UI Events* genoemd en logischerwijs heet de verzameling van al die vormen van interactie de *UI Events API*. Als frontender wordt je geacht deze API te beheersen. In onderstaande afbeelding zie je 20 verschillende elementen, aan tenminste 10 daarvan ga jij gebruikers interactie toevoegen.
@@ -101,13 +104,9 @@ Test in een browser of de versie die je net online gezet hebt ook via GitHub pag
 3. Vergelijk jouw implementatie even met een klasgenoot;
 4. Schrijf heel kort op wat je opviel bij het testen.
 
-## Criteria
+## Definition of done
 
 Focus sprint 5 - De focus van deze sprint ligt op interactie en informatie architectuur van een website.
-
-Deze deeltaak hoort bij het gedragscriterium:
-
-* Methodisch handelen: Student past aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving toe.
 
 Doel van deze opdracht:
 
