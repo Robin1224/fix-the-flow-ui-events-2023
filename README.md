@@ -10,8 +10,3 @@
 ## Experimenten
 <!-- In de Experimenten beschrijf je wat je per experimnet hebt gedaan en documenteer je de code aan de hand van voorbeelden -->
 <!-- Voeg een mooie poster visual toe 📸 per experiment -->
-
-
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
-
-This work is licensed under [GNU GPLv3](./LICENSE).
