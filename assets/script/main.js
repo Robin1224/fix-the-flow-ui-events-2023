@@ -27,6 +27,9 @@ const addListenerToElement = (
         // Run the handler on animation end to remove the class name
         el.addEventListener("animationend", classOrHandler);
       }
+
+      // Log the event listener
+      fancyListenerLog(elementIndex, type, classOrHandler);
     }
     // If it's not a function, make sure it's a valid string
     else if (typeof classOrHandler === "string") {
@@ -70,6 +73,9 @@ const addHintListener = (elementIndex, type, className) => {
       el.classList.toggle(className);
     });
 
+    // Log the event listener
+    fancyListenerLog(elementIndex, type, className);
+
     // If the event is mouseleave, overwrite it, but make sure to add the original handler
   } else if (type === "mouseleave") {
     el.addEventListener("mouseenter", () => {
@@ -86,6 +92,9 @@ const addHintListener = (elementIndex, type, className) => {
     el.addEventListener("animationend", () => {
       el.classList.toggle(className);
     });
+
+    // Log the event listener
+    fancyListenerLog(elementIndex, type, className);
 
     // If it's not an edgecase, simply add the hint listeners
   } else {
@@ -113,47 +122,65 @@ const fancyListenerLog = (element, type, stringOrHandler) => {
     "color: #fff; background-color: #176c75; font-weight: bold; font-size: 1em;",
     // event type:
     "color: #fff; background-color: #b00026; font-weight: bold; font-size: 1em;",
-    // class/function:
+    // class:
     "color: #fff; background-color: #4c00b0; font-weight: bold; font-size: 1em;",
+    // function:
+    "color: #fff; background-color: #7d5d06; font-weight: bold; font-size: 1em;",
   ];
 
-  const mainStyle = "color: #fff; background-color: #000;";
-  const elementStyle =
-    "color: #fff; background-color: #000; font-weight: bold;";
+  if (typeof stringOrHandler === "function") {
+    console.log(
+      `%c + %c Added event listener\n\n%c- Element: %c ${element} %c\n- Type:    %c ${type} %c\n- Handler: %c ${stringOrHandler.name} %c`,
 
-  console.log(
-    `%c + %c Added event listener\n
-    %c- Element: %c ${element} %c
-     - Type:    %c ${type} %c
-     - Class:   %c ${stringOrHandler} %c
-     `,
+      // First line
+      styles[0],
+      styles[1],
 
-    // First line
-    styles[0],
-    styles[1],
+      // Second line
+      styles[2],
+      styles[3],
 
-    // Second line
-    styles[2],
-    styles[3],
+      // Third line
+      styles[2],
+      styles[4],
 
-    // Third line
-    styles[2],
-    styles[4],
+      // Fourth line
+      styles[2],
+      styles[6],
 
-    // Fourth line
-    styles[2],
-    styles[5],
+      // Clear
+      styles[1]
+    );
+  } else {
+    console.log(
+      `%c + %c Added event listener\n\n%c- Element: %c ${element} %c\n- Type:    %c ${type} %c\n- Class:   %c ${stringOrHandler} %c`,
 
-    // Clear
-    styles[1]
-  );
+      // First line
+      styles[0],
+      styles[1],
+
+      // Second line
+      styles[2],
+      styles[3],
+
+      // Third line
+      styles[2],
+      styles[4],
+
+      // Fourth line
+      styles[2],
+      styles[5],
+
+      // Clear
+      styles[1]
+    );
+  }
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Event handlers
 const mouseMoveHandler = async (e) => {
-  // console.log(e);
   if (e.srcElement.classList.contains("red")) {
     return;
   } else {
@@ -163,10 +190,46 @@ const mouseMoveHandler = async (e) => {
   }
 };
 
+const dragHandler = async (e) => {
+  if (e.srcElement.classList.contains("grow-vertical")) {
+    return;
+  } else {
+    e.srcElement.classList.toggle("grow-vertical");
+    await sleep(500);
+    e.srcElement.classList.toggle("grow-vertical");
+  }
+};
+
+function permission () {
+  if ( typeof( DeviceMotionEvent ) !== "undefined" && typeof( DeviceMotionEvent.requestPermission ) === "function" ) {
+      // (optional) Do something before API request prompt.
+      DeviceMotionEvent.requestPermission()
+          .then( response => {
+          // (optional) Do something after API prompt dismissed.
+          if ( response == "granted" ) {
+              window.addEventListener( "devicemotion", (e) => {
+                  // do something for 'e' here.
+              })
+          }
+      })
+          .catch( console.error )
+  } else {
+      alert( "DeviceMotionEvent is not defined" );
+  }
+}
+const permissionBtn = document.getElementById( "permission" );
+permissionBtntn.addEventListener( "click", permission );
+
 // Add the event listeners to the elements
 addListenerToElement("mousedown", 1, "horizontal-shake");
 addListenerToElement("mouseup", 2, "vertical-shake");
 addListenerToElement("mouseleave", 3, "rotational-shake");
 addListenerToElement("mouseenter", 4, "grow");
 addListenerToElement("mousemove", 5, mouseMoveHandler, true);
+addListenerToElement("drag", 6, dragHandler, true);
+addListenerToElement("dragend", 7, "grow-horizontal");
+addListenerToElement("cut", 8, "shrink-horizontal");
+addListenerToElement("copy", 9, "shrink-vertical");
+addListenerToElement("paste", 10, "jump");
+
 addListenerToElement("click", 12, "jump");

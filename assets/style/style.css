@@ -58,8 +58,24 @@ a {
 
   animation-timing-function: ease-in-out;
   animation-duration: var(--animation-duration);
+
   animation-iteration-count: 1;
   transition: 0.5s;
+  transition-property: transform, background-color;
+}
+
+#permission {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 0.8em;
+  background: var(--secondary);
+  color: var(--highlight-primary);
+  border: var(--line) solid var(--highlight-primary);
+  border-radius: var(--pill);
+  font-weight: normal;
+  text-decoration: none;
+  margin-top: 4rem;
+  cursor: pointer;
 }
 
 a:hover {
@@ -101,7 +117,26 @@ a:nth-of-type(12) {
 }
 
 .red {
-  background: rgb(143, 12, 12);
+  background: var(--highlight-secondary);
+}
+
+.grow-vertical {
+  transform: scaleY(1.1);
+}
+
+.grow-horizontal {
+  animation-name: grow-horizontal;
+  animation-duration: calc(0.5 * var(--animation-duration));
+}
+
+.shrink-horizontal {
+  animation-name: shrink-horizontal;
+  animation-duration: calc(0.5 * var(--animation-duration));
+}
+
+.shrink-vertical {
+  animation-name: shrink-vertical;
+  animation-duration: calc(0.5 * var(--animation-duration));
 }
 
 @keyframes jump {
@@ -246,5 +281,41 @@ a:nth-of-type(12) {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes grow-horizontal {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shrink-horizontal {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shrink-vertical {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.9);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
