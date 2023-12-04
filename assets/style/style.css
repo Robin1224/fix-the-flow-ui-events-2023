@@ -7,20 +7,44 @@
   --radius: 0.5rem;
   --pill: 2rem;
   --line: 0.1rem;
+
+  /* Animations */
+  --animation-intensity: 0.3;
+  --animation-duration: 1s;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 2rem;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   background: var(--secondary);
 }
+
+header {
+  margin: 1rem;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--primary);
+}
+
+header > span {
+  color: var(--highlight-primary);
+}
+
 section {
   max-width: 90vw;
 }
+
 a {
   display: inline-block;
   margin: 0.2em;
@@ -31,7 +55,13 @@ a {
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
+
+  animation-timing-function: ease-in-out;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: 1;
+  transition: 0.5s;
 }
+
 a:hover {
   color: var(--primary);
   border-color: var(--primary);
@@ -51,7 +81,27 @@ a:nth-of-type(12) {
   animation-name: jump;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1.2s;
-  animation-iteration-count: 1;
+}
+
+.horizontal-shake {
+  animation-name: horizontal-shake;
+}
+
+.vertical-shake {
+  animation-name: vertical-shake;
+}
+
+.rotational-shake {
+  animation-name: rotational-shake;
+}
+
+.grow {
+  animation-name: grow;
+  animation-duration: calc(0.5 * var(--animation-duration));
+}
+
+.red {
+  background: rgb(143, 12, 12);
 }
 
 @keyframes jump {
@@ -79,3 +129,122 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+@keyframes horizontal-shake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(calc(-1rem * var(--animation-intensity)));
+  }
+  20% {
+    transform: translateX(calc(1rem * var(--animation-intensity)));
+  }
+  30% {
+    transform: translateX(calc(-1rem * var(--animation-intensity)));
+  }
+  40% {
+    transform: translateX(calc(1rem * var(--animation-intensity)));
+  }
+  50% {
+    transform: translateX(calc(-1rem * var(--animation-intensity)));
+  }
+  60% {
+    transform: translateX(calc(1rem * var(--animation-intensity)));
+  }
+  70% {
+    transform: translateX(calc(-1rem * var(--animation-intensity)));
+  }
+  80% {
+    transform: translateX(calc(1rem * var(--animation-intensity)));
+  }
+  90% {
+    transform: translateX(calc(-1rem * var(--animation-intensity)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes vertical-shake {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(calc(-1rem * var(--animation-intensity)));
+  }
+  20% {
+    transform: translateY(calc(1rem * var(--animation-intensity)));
+  }
+  30% {
+    transform: translateY(calc(-1rem * var(--animation-intensity)));
+  }
+  40% {
+    transform: translateY(calc(1rem * var(--animation-intensity)));
+  }
+  50% {
+    transform: translateY(calc(-1rem * var(--animation-intensity)));
+  }
+  60% {
+    transform: translateY(calc(1rem * var(--animation-intensity)));
+  }
+  70% {
+    transform: translateY(calc(-1rem * var(--animation-intensity)));
+  }
+  80% {
+    transform: translateY(calc(1rem * var(--animation-intensity)));
+  }
+  90% {
+    transform: translateY(calc(-1rem * var(--animation-intensity)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotational-shake {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(calc(-30deg * var(--animation-intensity)));
+  }
+  20% {
+    transform: rotate(calc(30deg * var(--animation-intensity)));
+  }
+  30% {
+    transform: rotate(calc(-30deg * var(--animation-intensity)));
+  }
+  40% {
+    transform: rotate(calc(30deg * var(--animation-intensity)));
+  }
+  50% {
+    transform: rotate(calc(-30deg * var(--animation-intensity)));
+  }
+  60% {
+    transform: rotate(calc(30deg * var(--animation-intensity)));
+  }
+  70% {
+    transform: rotate(calc(-30deg * var(--animation-intensity)));
+  }
+  80% {
+    transform: rotate(calc(30deg * var(--animation-intensity)));
+  }
+  90% {
+    transform: rotate(calc(-30deg * var(--animation-intensity)));
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
