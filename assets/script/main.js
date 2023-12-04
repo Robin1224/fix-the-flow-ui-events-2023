@@ -212,7 +212,7 @@ function permission() {
         if (response == "granted") {
           window.addEventListener("devicemotion", (e) => {
             // Shake sensitivity (a lower number is more)
-            var sensitivity = 20;
+            var sensitivity = 40;
 
             // Position variables
             var x1 = 0,
