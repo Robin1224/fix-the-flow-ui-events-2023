@@ -264,59 +264,103 @@ const createMatterEngine = () => {
     },
   });
 
+  var totalObjects = [];
+
   // create objects
-  var eventText = createObjectFromSelector("header>h1", "event-text");
-  var eventDescription = createObjectFromSelector("header>span", "event-description");
+  totalObjects.push(createObjectFromSelector("header>h1", "event-text"));
+  totalObjects.push(createObjectFromSelector("header>span", "event-description"));
 
-  var frontend = createObjectFromSelector("a:nth-of-type(1)", "frontend");
-  var design = createObjectFromSelector("a:nth-of-type(2)", "design");
-  var and = createObjectFromSelector("a:nth-of-type(3)", "and");
-  var development = createObjectFromSelector("a:nth-of-type(4)", "development");
-  var sprint5 = createObjectFromSelector("a:nth-of-type(5)", "sprint-5");
-  var fix = createObjectFromSelector("a:nth-of-type(6)", "fix");
-  var the = createObjectFromSelector("a:nth-of-type(7)", "the");
-  var flow = createObjectFromSelector("a:nth-of-type(8)", "flow");
-  var user = createObjectFromSelector("a:nth-of-type(9)", "user");
-  var interface = createObjectFromSelector("a:nth-of-type(10)", "interface");
-  var events = createObjectFromSelector("a:nth-of-type(11)", "events");
-  var interaction = createObjectFromSelector("a:nth-of-type(12)", "interaction");
-  var userFlow = createObjectFromSelector("a:nth-of-type(13)", "user-flow");
-  var wireflow = createObjectFromSelector("a:nth-of-type(14)", "wireflow");
-  var feedback = createObjectFromSelector("a:nth-of-type(15)", "feedback");
-  var feedforward = createObjectFromSelector("a:nth-of-type(16)", "feedforward");
-  var labels = createObjectFromSelector("a:nth-of-type(17)", "labels");
-  var states = createObjectFromSelector("a:nth-of-type(18)", "states");
-  var navigation = createObjectFromSelector("a:nth-of-type(19)", "navigation");
-  var code = createObjectFromSelector("a:nth-of-type(20)", "code");
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(1)", "frontend"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(2)", "design"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(3)", "and"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(4)", "development"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(5)", "sprint-5"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(6)", "fix"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(7)", "the"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(8)", "flow"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(9)", "user"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(10)", "interface"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(11)", "events"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(12)", "interaction"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(13)", "user-flow"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(14)", "wireflow"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(15)", "feedback"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(16)", "feedforward"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(17)", "labels"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(18)", "states"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(19)", "navigation"));
+  totalObjects.push(createObjectFromSelector("a:nth-of-type(20)", "code"));
 
-  // var boxB = Bodies.rectangle(450, 50, 80, 80);
-  var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+  // Creating ground plane
+  totalObjects.push(
+    Bodies.rectangle(
+      window.innerWidth / 2,
+      window.innerHeight,
+      window.innerWidth,
+      1,
+      { isStatic: true }
+    )
+  );
+
+  // Left wall
+  totalObjects.push(
+    Bodies.rectangle(0, window.innerHeight / 2, 1, window.innerHeight, {
+      isStatic: true,
+    })
+  );
+
+  // Right wall
+  totalObjects.push(
+    Bodies.rectangle(
+      window.innerWidth,
+      window.innerHeight / 2,
+      1,
+      window.innerHeight,
+      { isStatic: true }
+    )
+  );
+
+  // Top wall
+
+  totalObjects.push(
+    Bodies.rectangle(
+      window.innerWidth / 2,
+      0,
+      window.innerWidth,
+      1,
+      { isStatic: true }
+    )
+  );
 
   // add all of the bodies to the world
-  Composite.add(engine.world, [
-    eventText,
-    eventDescription,
-    frontend, 
-    design, 
-    and,
-    development,
-    sprint5,
-    fix, 
-    the,
-    flow,
-    user,
-    interface,
-    events,
-    interaction,
-    userFlow,
-    wireflow,
-    feedback,
-    feedforward,
-    labels,
-    states,
-    navigation,
-    code,
-    ground]);
+  Composite.add(
+    engine.world,
+    totalObjects
+  );
+
+  // add gyro control
+  if (typeof window !== 'undefined') {
+    var updateGravity = function(event) {
+        var orientation = typeof window.orientation !== 'undefined' ? window.orientation : 0,
+            gravity = engine.gravity;
+
+        if (orientation === 0) {
+            gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+            gravity.y = Common.clamp(event.beta, -90, 90) / 90;
+        } else if (orientation === 180) {
+            gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+            gravity.y = Common.clamp(-event.beta, -90, 90) / 90;
+        } else if (orientation === 90) {
+            gravity.x = Common.clamp(event.beta, -90, 90) / 90;
+            gravity.y = Common.clamp(-event.gamma, -90, 90) / 90;
+        } else if (orientation === -90) {
+            gravity.x = Common.clamp(-event.beta, -90, 90) / 90;
+            gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
+        }
+    };
+
+    window.addEventListener('deviceorientation', updateGravity);
+}
 
   // run the renderer
   Render.run(render);
@@ -399,8 +443,8 @@ document.getElementById("test-button").addEventListener("click", () => {
     createMatterEngine();
   }
   sleep(100).then(() => {
-    document.querySelectorAll("header, section, h2, #permission").forEach((el) => {
+    document.querySelectorAll("header, section, h2, button").forEach((el) => {
       el.classList.toggle("hidden", true);
     });
-  })
+  });
 });
