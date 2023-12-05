@@ -141,7 +141,15 @@ const shakeListener = () => {
     var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
 
     if (change > sensitivity) {
-      alert("Shake!");
+      if (!engineExists) {
+        document.querySelector("header>span").textContent = "Shake!";
+        createMatterEngine();
+      }
+      sleep(100).then(() => {
+        document.querySelectorAll("header, section, h2, button").forEach((el) => {
+          el.classList.toggle("hidden", true);
+        });
+      });
     }
 
     // Update new position
