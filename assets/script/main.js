@@ -212,7 +212,7 @@ function permission() {
         if (response == "granted") {
           window.addEventListener("devicemotion", (e) => {
             // Shake sensitivity (a lower number is more)
-            var sensitivity = 150;
+            var sensitivity = 50;
 
             // Position variables
             var x1 = 0,
@@ -259,6 +259,8 @@ const permissionBtn = document.getElementById("permission");
 permissionBtn.addEventListener("click", permission);
 
 // Add the event listeners to the elements
+console.groupCollapsed("Event listeners");
+
 addListenerToElement("mousedown", 1, "horizontal-shake");
 addListenerToElement("mouseup", 2, "vertical-shake");
 addListenerToElement("mouseleave", 3, "rotational-shake");
@@ -271,3 +273,5 @@ addListenerToElement("copy", 9, "shrink-vertical");
 addListenerToElement("paste", 10, "jump");
 
 addListenerToElement("click", 12, "jump");
+
+console.groupEnd();
