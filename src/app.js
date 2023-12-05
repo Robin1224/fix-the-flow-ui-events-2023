@@ -1,3 +1,6 @@
+var Matter = require("matter-js");
+var engineExists = false;
+
 const addListenerToElement = (
   type,
   elementIndex,
@@ -109,6 +112,45 @@ const addHintListener = (elementIndex, type, className) => {
   }
 };
 
+const shakeListener = () => {
+  // Shake sensitivity (a lower number is more)
+  var sensitivity = 400;
+
+  // Position variables
+  var x1 = 0,
+    y1 = 0,
+    z1 = 0,
+    x2 = 0,
+    y2 = 0,
+    z2 = 0;
+
+  // Listen to motion events and update the position
+  window.addEventListener(
+    "devicemotion",
+    function (e) {
+      x1 = e.accelerationIncludingGravity.x;
+      y1 = e.accelerationIncludingGravity.y;
+      z1 = e.accelerationIncludingGravity.z;
+    },
+    false
+  );
+
+  // Periodically check the position and fire
+  // if the change is greater than the sensitivity
+  setInterval(function () {
+    var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
+
+    if (change > sensitivity) {
+      alert("Shake!");
+    }
+
+    // Update new position
+    x2 = x1;
+    y2 = y1;
+    z2 = z1;
+  }, 150);
+};
+
 const fancyListenerLog = (element, type, stringOrHandler) => {
   // Create style strings for the log message
   const styles = [
@@ -177,7 +219,137 @@ const fancyListenerLog = (element, type, stringOrHandler) => {
   }
 };
 
+function permission() {
+  if (
+    typeof DeviceMotionEvent !== "undefined" &&
+    typeof DeviceMotionEvent.requestPermission === "function"
+  ) {
+    // (optional) Do something before API request prompt.
+    DeviceMotionEvent.requestPermission()
+      .then((response) => {
+        // (optional) Do something after API prompt dismissed.
+        if (response == "granted") {
+          shakeListener();
+        }
+      })
+      .catch(console.error);
+  } else {
+    alert("DeviceMotionEvent is not defined");
+  }
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const createMatterEngine = () => {
+  // module aliases
+  var Engine = Matter.Engine;
+  var Render = Matter.Render;
+  var Runner = Matter.Runner;
+  var Bodies = Matter.Bodies;
+  var Composite = Matter.Composite;
+
+  // create an engine
+  var engine = Engine.create();
+
+  // create a renderer
+  var render = Render.create({
+    element: document.body,
+    engine: engine,
+    options: {
+      wireframes: false,
+      height: window.innerHeight,
+      width: window.innerWidth,
+      pixelRatio: 1,
+      background: "#050840",
+    },
+  });
+
+  // create objects
+  var eventText = createObjectFromSelector("header>h1", "event-text");
+  var eventDescription = createObjectFromSelector("header>span", "event-description");
+
+  var frontend = createObjectFromSelector("a:nth-of-type(1)", "frontend");
+  var design = createObjectFromSelector("a:nth-of-type(2)", "design");
+  var and = createObjectFromSelector("a:nth-of-type(3)", "and");
+  var development = createObjectFromSelector("a:nth-of-type(4)", "development");
+  var sprint5 = createObjectFromSelector("a:nth-of-type(5)", "sprint-5");
+  var fix = createObjectFromSelector("a:nth-of-type(6)", "fix");
+  var the = createObjectFromSelector("a:nth-of-type(7)", "the");
+  var flow = createObjectFromSelector("a:nth-of-type(8)", "flow");
+  var user = createObjectFromSelector("a:nth-of-type(9)", "user");
+  var interface = createObjectFromSelector("a:nth-of-type(10)", "interface");
+  var events = createObjectFromSelector("a:nth-of-type(11)", "events");
+  var interaction = createObjectFromSelector("a:nth-of-type(12)", "interaction");
+  var userFlow = createObjectFromSelector("a:nth-of-type(13)", "user-flow");
+  var wireflow = createObjectFromSelector("a:nth-of-type(14)", "wireflow");
+  var feedback = createObjectFromSelector("a:nth-of-type(15)", "feedback");
+  var feedforward = createObjectFromSelector("a:nth-of-type(16)", "feedforward");
+  var labels = createObjectFromSelector("a:nth-of-type(17)", "labels");
+  var states = createObjectFromSelector("a:nth-of-type(18)", "states");
+  var navigation = createObjectFromSelector("a:nth-of-type(19)", "navigation");
+  var code = createObjectFromSelector("a:nth-of-type(20)", "code");
+
+  // var boxB = Bodies.rectangle(450, 50, 80, 80);
+  var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+
+  // add all of the bodies to the world
+  Composite.add(engine.world, [
+    eventText,
+    eventDescription,
+    frontend, 
+    design, 
+    and,
+    development,
+    sprint5,
+    fix, 
+    the,
+    flow,
+    user,
+    interface,
+    events,
+    interaction,
+    userFlow,
+    wireflow,
+    feedback,
+    feedforward,
+    labels,
+    states,
+    navigation,
+    code,
+    ground]);
+
+  // run the renderer
+  Render.run(render);
+
+  // create runner
+  var runner = Runner.create();
+
+  // run the engine
+  Runner.run(runner, engine);
+
+  // Let future functions know that the engine exists
+  engineExists = true;
+};
+
+const createObjectFromSelector = (selector, spriteName) => {
+  const el = document.querySelector(selector);
+  var { x, y, width, height } = el.getBoundingClientRect();
+
+  x += width / 2;
+  y += height / 2;
+
+  const object = Matter.Bodies.rectangle(x, y, width, height, {
+    render: {
+      sprite: {
+        texture: `assets/sprites/${spriteName}.png`,
+        xScale: 0.5,
+        yScale: 0.5,
+      },
+    },
+  });
+
+  return object;
+};
 
 // Event handlers
 const mouseMoveHandler = async (e) => {
@@ -200,64 +372,6 @@ const dragHandler = async (e) => {
   }
 };
 
-function permission() {
-  if (
-    typeof DeviceMotionEvent !== "undefined" &&
-    typeof DeviceMotionEvent.requestPermission === "function"
-  ) {
-    // (optional) Do something before API request prompt.
-    DeviceMotionEvent.requestPermission()
-      .then((response) => {
-        // (optional) Do something after API prompt dismissed.
-        if (response == "granted") {
-          shakeListener();
-        }
-      })
-      .catch(console.error);
-  } else {
-    alert("DeviceMotionEvent is not defined");
-  }
-}
-
-const shakeListener = () => {
-  // Shake sensitivity (a lower number is more)
-  var sensitivity = 400;
-
-  // Position variables
-  var x1 = 0,
-      y1 = 0,
-      z1 = 0,
-      x2 = 0,
-      y2 = 0,
-      z2 = 0;
-
-  // Listen to motion events and update the position
-  window.addEventListener(
-    "devicemotion",
-    function (e) {
-      x1 = e.accelerationIncludingGravity.x;
-      y1 = e.accelerationIncludingGravity.y;
-      z1 = e.accelerationIncludingGravity.z;
-    },
-    false
-  );
-
-  // Periodically check the position and fire
-  // if the change is greater than the sensitivity
-  setInterval(function () {
-    var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
-
-    if (change > sensitivity) {
-      alert("Shake!");
-    }
-
-     // Update new position
-    x2 = x1;
-    y2 = y1;
-    z2 = z1;
-  }, 150);
-};
-
 const permissionBtn = document.getElementById("permission");
 permissionBtn.addEventListener("click", permission);
 
@@ -278,3 +392,15 @@ addListenerToElement("paste", 10, "jump");
 addListenerToElement("click", 12, "jump");
 
 console.groupEnd();
+
+document.getElementById("test-button").addEventListener("click", () => {
+  if (!engineExists) {
+    document.querySelector("header>span").textContent = "Shake!";
+    createMatterEngine();
+  }
+  sleep(100).then(() => {
+    document.querySelectorAll("header, section, h2, #permission").forEach((el) => {
+      el.classList.toggle("hidden", true);
+    });
+  })
+});

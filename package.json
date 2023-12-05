@@ -1,0 +1,22 @@
+{
+  "name": "fix-the-flow-ui-events-2023",
+  "version": "1.0.0",
+  "description": "> _Fork_ deze deeltaak en ga aan de slag. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "watch-js": "watchify ./src/app.js -o ./assets/script/bundle.js",
+    "build-js": "browserify ./src/app.js -o ./assets/script/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dom-to-image": "^2.6.0",
+    "dom-to-image-more": "^3.2.0",
+    "matter-dom-plugin": "^1.0.0",
+    "matter-js": "^0.19.0"
+  }
+}
