@@ -11119,7 +11119,7 @@ const addHintListener = (elementIndex, type, className) => {
 
 const shakeListener = () => {
   // Shake sensitivity (a lower number is more)
-  var sensitivity = 400;
+  var sensitivity = 250;
 
   // Position variables
   var x1 = 0,
@@ -11242,6 +11242,7 @@ function permission() {
       .then((response) => {
         // (optional) Do something after API prompt dismissed.
         if (response == "granted") {
+          const el = document.querySelector("h2").textContent = "permission granted!";
           shakeListener();
         }
       })
