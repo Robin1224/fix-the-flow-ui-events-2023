@@ -237,6 +237,7 @@ function permission() {
       .then((response) => {
         // (optional) Do something after API prompt dismissed.
         if (response == "granted") {
+          const el = document.querySelector("h2").textContent = "permission granted!";
           shakeListener();
         }
       })
