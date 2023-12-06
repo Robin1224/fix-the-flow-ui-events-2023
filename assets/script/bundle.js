@@ -11238,7 +11238,7 @@ const fancyListenerLog = (element, type, stringOrHandler) => {
   }
 };
 
-function permission() {
+const  permission = () => {
   if (
     typeof DeviceMotionEvent !== "undefined" &&
     typeof DeviceMotionEvent.requestPermission === "function"
@@ -11365,30 +11365,30 @@ const createMatterEngine = () => {
   );
 
   // add gyro control
-  if (typeof window !== 'undefined') {
-    var updateGravity = function(event) {
-        var orientation = typeof event.alpha !== 'undefined' ? event.alpha : 0,
-            gravity = engine.gravity;
+  // if (typeof window !== 'undefined') {
+  //   var updateGravity = function(event) {
+  //       var orientation = typeof event.alpha !== 'undefined' ? event.alpha : 0,
+  //           gravity = engine.gravity;
 
-            console.log(`orientation: ${orientation}`);
+  //           console.log(`orientation: ${orientation}`);
 
-        if (orientation === 0) {
-            gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
-            gravity.y = Common.clamp(event.beta, -90, 90) / 90;
-        } else if (orientation === 180) {
-            gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
-            gravity.y = Common.clamp(-event.beta, -90, 90) / 90;
-        } else if (orientation === 90) {
-            gravity.x = Common.clamp(event.beta, -90, 90) / 90;
-            gravity.y = Common.clamp(-event.gamma, -90, 90) / 90;
-        } else if (orientation === -90) {
-            gravity.x = Common.clamp(-event.beta, -90, 90) / 90;
-            gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
-        }
-    };
+  //       if (orientation === 0) {
+  //           gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+  //           gravity.y = Common.clamp(event.beta, -90, 90) / 90;
+  //       } else if (orientation === 180) {
+  //           gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
+  //           gravity.y = Common.clamp(-event.beta, -90, 90) / 90;
+  //       } else if (orientation === 90) {
+  //           gravity.x = Common.clamp(event.beta, -90, 90) / 90;
+  //           gravity.y = Common.clamp(-event.gamma, -90, 90) / 90;
+  //       } else if (orientation === -90) {
+  //           gravity.x = Common.clamp(-event.beta, -90, 90) / 90;
+  //           gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
+  //       }
+  //   };
 
-    window.addEventListener('deviceorientation', updateGravity);
-}
+  //   window.addEventListener('deviceorientation', updateGravity);
+  // }
 
   // run the renderer
   Render.run(render);

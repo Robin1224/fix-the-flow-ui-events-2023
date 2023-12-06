@@ -233,7 +233,7 @@ const fancyListenerLog = (element, type, stringOrHandler) => {
   }
 };
 
-function permission() {
+const  permission = () => {
   if (
     typeof DeviceMotionEvent !== "undefined" &&
     typeof DeviceMotionEvent.requestPermission === "function"
@@ -383,7 +383,7 @@ const createMatterEngine = () => {
   //   };
 
   //   window.addEventListener('deviceorientation', updateGravity);
-}
+  // }
 
   // run the renderer
   Render.run(render);
