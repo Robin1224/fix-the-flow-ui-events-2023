@@ -11360,7 +11360,7 @@ const createMatterEngine = () => {
   // add gyro control
   if (typeof window !== 'undefined') {
     var updateGravity = function(event) {
-        var orientation = typeof window.screen.orientation.angle !== 'undefined' ? window.screen.orientation.angle : 0,
+        var orientation = typeof event.alpha !== 'undefined' ? event.alpha : 0,
             gravity = engine.gravity;
 
             console.log(`orientation: ${orientation}`);
