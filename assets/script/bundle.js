@@ -11119,7 +11119,6 @@ const addHintListener = (elementIndex, type, className) => {
 };
 
 const shakeListener = () => {
-
   shakeListenerExists = true;
 
   // Shake sensitivity (a lower number is more)
@@ -11151,12 +11150,19 @@ const shakeListener = () => {
     console.log(change);
 
     if (change > sensitivity) {
-      console.log("%cShake!", "background-color: red;");
+      // Shake detected!
+      // console.log("%cShake!", "background-color: red;");
+
+      // Check if the engine exists already so we don't make several
       if (!engineExists) {
+        // Make the header text say "Shake!" before we create the engine, otherwise the position will be off
         document.querySelector("header>span").textContent = "Shake!";
+        // Finally, initialize the engine
         createMatterEngine();
       }
+      // Wait for the engine to be created before hiding the elements to avoid a weird bug
       sleep(100).then(() => {
+        // Hide all elements except for the canvas which contains the physics engine
         document.querySelectorAll("header, section, h2, button").forEach((el) => {
           el.classList.toggle("hidden", true);
         });
@@ -11475,5 +11481,4 @@ document.getElementById("test-button").addEventListener("click", () => {
     });
   });
 });
-
 },{"matter-js":1}]},{},[2]);
