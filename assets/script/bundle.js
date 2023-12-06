@@ -11148,7 +11148,7 @@ const shakeListener = () => {
     console.log(change);
 
     if (change > sensitivity) {
-      console.log("Shake!");
+      console.log("%cShake!", "background-color: red;");
       if (!engineExists) {
         document.querySelector("header>span").textContent = "Shake!";
         createMatterEngine();
@@ -11360,8 +11360,10 @@ const createMatterEngine = () => {
   // add gyro control
   if (typeof window !== 'undefined') {
     var updateGravity = function(event) {
-        var orientation = typeof screen.orientation.angle !== 'undefined' ? screen.orientation.angle : 0,
+        var orientation = typeof window.screen.orientation.angle !== 'undefined' ? window.screen.orientation.angle : 0,
             gravity = engine.gravity;
+
+            console.log(`orientation: ${orientation}`);
 
         if (orientation === 0) {
             gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
@@ -11377,12 +11379,6 @@ const createMatterEngine = () => {
             gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
         }
     };
-
-    window.screen.orientation.addEventListener("change", (event) => {
-      const type = event.target.type;
-      const angle = event.target.angle;
-      console.log(`ScreenOrientation change: ${type}, ${angle} degrees.`);
-    });
 
     window.addEventListener('deviceorientation', updateGravity);
 }
