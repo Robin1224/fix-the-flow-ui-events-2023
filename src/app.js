@@ -131,6 +131,7 @@ const shakeListener = () => {
       x1 = e.accelerationIncludingGravity.x;
       y1 = e.accelerationIncludingGravity.y;
       z1 = e.accelerationIncludingGravity.z;
+      console.log(`accelerationIncludingGravity: ${x1}, ${y1}, ${z1}`)
     },
     false
   );
@@ -238,7 +239,7 @@ function permission() {
       .then((response) => {
         // (optional) Do something after API prompt dismissed.
         if (response == "granted") {
-          const el = document.querySelector("h2").textContent = "permission granted!";
+          console.log("Device permission granted!");
           shakeListener();
         }
       })
