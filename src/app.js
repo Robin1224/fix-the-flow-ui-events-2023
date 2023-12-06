@@ -141,6 +141,7 @@ const shakeListener = () => {
     var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
 
     if (change > sensitivity) {
+      alert("Shake!");
       if (!engineExists) {
         document.querySelector("header>span").textContent = "Shake!";
         createMatterEngine();
@@ -350,7 +351,7 @@ const createMatterEngine = () => {
   // add gyro control
   if (typeof window !== 'undefined') {
     var updateGravity = function(event) {
-        var orientation = typeof window.screen.orientation.angle !== 'undefined' ? window.screen.orientation.angle : 0,
+        var orientation = typeof screen.orientation.angle !== 'undefined' ? screen.orientation.angle : 0,
             gravity = engine.gravity;
 
         if (orientation === 0) {
