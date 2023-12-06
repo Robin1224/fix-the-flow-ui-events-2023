@@ -11146,6 +11146,7 @@ const shakeListener = () => {
     var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
 
     if (change > sensitivity) {
+      alert("Shake!");
       if (!engineExists) {
         document.querySelector("header>span").textContent = "Shake!";
         createMatterEngine();
@@ -11355,7 +11356,7 @@ const createMatterEngine = () => {
   // add gyro control
   if (typeof window !== 'undefined') {
     var updateGravity = function(event) {
-        var orientation = typeof window.screen.orientation.angle !== 'undefined' ? window.screen.orientation.angle : 0,
+        var orientation = typeof screen.orientation.angle !== 'undefined' ? screen.orientation.angle : 0,
             gravity = engine.gravity;
 
         if (orientation === 0) {
@@ -11372,6 +11373,12 @@ const createMatterEngine = () => {
             gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
         }
     };
+
+    screen.orientation.addEventListener("change", (event) => {
+      const type = event.target.type;
+      const angle = event.target.angle;
+      document.querySelector("h2").innerText = `ScreenOrientation change: ${type}, ${angle} degrees.`;
+    });
 
     window.addEventListener('deviceorientation', updateGravity);
 }
@@ -11457,7 +11464,7 @@ document.getElementById("test-button").addEventListener("click", () => {
     createMatterEngine();
   }
   sleep(100).then(() => {
-    document.querySelectorAll("header, section, h2, button").forEach((el) => {
+    document.querySelectorAll("header, section, button").forEach((el) => {
       el.classList.toggle("hidden", true);
     });
   });
