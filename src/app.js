@@ -334,17 +334,17 @@ const createMatterEngine = () => {
     )
   );
 
-  // Top wall
+  // Ceiling
 
-  totalObjects.push(
-    Bodies.rectangle(
-      window.innerWidth / 2,
-      0,
-      window.innerWidth,
-      1,
-      { isStatic: true }
-    )
-  );
+  // totalObjects.push(
+  //   Bodies.rectangle(
+  //     window.innerWidth / 2,
+  //     0,
+  //     window.innerWidth,
+  //     1,
+  //     { isStatic: true }
+  //   )
+  // );
 
   // add all of the bodies to the world
   Composite.add(
