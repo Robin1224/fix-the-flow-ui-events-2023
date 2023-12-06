@@ -11147,7 +11147,7 @@ const shakeListener = () => {
   // if the change is greater than the sensitivity
   setInterval(function () {
     var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
-    console.log(change);
+    // console.log(change);
 
     if (change > sensitivity) {
       // Shake detected!
@@ -11271,6 +11271,9 @@ const permission = () => {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const createMatterEngine = () => {
+  // Let future functions know that the engine exists
+  engineExists = true;
+
   // module aliases
   var Engine = Matter.Engine;
   var Render = Matter.Render;
@@ -11402,9 +11405,6 @@ const createMatterEngine = () => {
 
   // run the engine
   Runner.run(runner, engine);
-
-  // Let future functions know that the engine exists
-  engineExists = true;
 };
 
 const createObjectFromSelector = (selector, spriteName) => {
