@@ -11119,6 +11119,9 @@ const addHintListener = (elementIndex, type, className) => {
 };
 
 const shakeListener = () => {
+
+  shakeListenerExists = true;
+
   // Shake sensitivity (a lower number is more)
   var sensitivity = 25;
 
@@ -11247,13 +11250,17 @@ function permission() {
         if (response == "granted") {
           console.log("Device permission granted!");
           if (!shakeListenerExists) {
-          shakeListener();
+            shakeListener();
           };
         }
       })
-      .catch(console.error);
+      .catch(
+        console.log("%cDevice permission denied.", "background-color: red;")
+      );
   } else {
-    alert("DeviceMotionEvent is not defined");
+    if (!shakeListenerExists) {
+      shakeListener();
+    };
   }
 }
 
