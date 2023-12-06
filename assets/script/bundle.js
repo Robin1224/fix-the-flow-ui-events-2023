@@ -11152,7 +11152,7 @@ const shakeListener = () => {
         createMatterEngine();
       }
       sleep(100).then(() => {
-        document.querySelectorAll("header, section, h2, button").forEach((el) => {
+        document.querySelectorAll("header, section, button").forEach((el) => {
           el.classList.toggle("hidden", true);
         });
       });
@@ -11374,7 +11374,7 @@ const createMatterEngine = () => {
         }
     };
 
-    screen.orientation.addEventListener("change", (event) => {
+    window.screen.orientation.addEventListener("change", (event) => {
       const type = event.target.type;
       const angle = event.target.angle;
       document.querySelector("h2").innerText = `ScreenOrientation change: ${type}, ${angle} degrees.`;
@@ -11464,7 +11464,8 @@ document.getElementById("test-button").addEventListener("click", () => {
     createMatterEngine();
   }
   sleep(100).then(() => {
-    document.querySelectorAll("header, section, button").forEach((el) => {
+    document.querySelectorAll("header, section, h2, button").forEach((el) => {
+      console.log(el.type);
       el.classList.toggle("hidden", true);
     });
   });
