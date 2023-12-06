@@ -11120,7 +11120,7 @@ const addHintListener = (elementIndex, type, className) => {
 
 const shakeListener = () => {
   // Shake sensitivity (a lower number is more)
-  var sensitivity = 250;
+  var sensitivity = 35;
 
   // Position variables
   var x1 = 0,
@@ -11154,7 +11154,7 @@ const shakeListener = () => {
         createMatterEngine();
       }
       sleep(100).then(() => {
-        document.querySelectorAll("header, section, button").forEach((el) => {
+        document.querySelectorAll("header, section, h2, button").forEach((el) => {
           el.classList.toggle("hidden", true);
         });
       });

@@ -115,7 +115,7 @@ const addHintListener = (elementIndex, type, className) => {
 
 const shakeListener = () => {
   // Shake sensitivity (a lower number is more)
-  var sensitivity = 250;
+  var sensitivity = 35;
 
   // Position variables
   var x1 = 0,
