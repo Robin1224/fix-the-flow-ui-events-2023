@@ -11377,7 +11377,7 @@ const createMatterEngine = () => {
     window.screen.orientation.addEventListener("change", (event) => {
       const type = event.target.type;
       const angle = event.target.angle;
-      document.querySelector("h2").innerText = `ScreenOrientation change: ${type}, ${angle} degrees.`;
+      console.log(`ScreenOrientation change: ${type}, ${angle} degrees.`);
     });
 
     window.addEventListener('deviceorientation', updateGravity);
