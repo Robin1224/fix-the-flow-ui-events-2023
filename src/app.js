@@ -143,7 +143,7 @@ const shakeListener = () => {
     console.log(change);
 
     if (change > sensitivity) {
-      console.log("Shake!");
+      console.log("%cShake!", "background-color: red;");
       if (!engineExists) {
         document.querySelector("header>span").textContent = "Shake!";
         createMatterEngine();
