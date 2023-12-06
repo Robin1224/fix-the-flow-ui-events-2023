@@ -149,7 +149,7 @@ const shakeListener = () => {
         createMatterEngine();
       }
       sleep(100).then(() => {
-        document.querySelectorAll("header, section, button").forEach((el) => {
+        document.querySelectorAll("header, section, h2, button").forEach((el) => {
           el.classList.toggle("hidden", true);
         });
       });
