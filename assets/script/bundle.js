@@ -11005,6 +11005,7 @@ var Common = __webpack_require__(0);
 },{}],2:[function(require,module,exports){
 var Matter = require("matter-js");
 var engineExists = false;
+var shakeListenerExists = false;
 
 const addListenerToElement = (
   type,
@@ -11136,7 +11137,6 @@ const shakeListener = () => {
       x1 = e.accelerationIncludingGravity.x;
       y1 = e.accelerationIncludingGravity.y;
       z1 = e.accelerationIncludingGravity.z;
-      console.log(`accelerationIncludingGravity: ${x1}, ${y1}, ${z1}`)
     },
     false
   );
@@ -11145,9 +11145,10 @@ const shakeListener = () => {
   // if the change is greater than the sensitivity
   setInterval(function () {
     var change = Math.abs(x1 - x2 + y1 - y2 + z1 - z2);
+    console.log(change);
 
     if (change > sensitivity) {
-      alert("Shake!");
+      console.log("Shake!");
       if (!engineExists) {
         document.querySelector("header>span").textContent = "Shake!";
         createMatterEngine();
@@ -11245,7 +11246,9 @@ function permission() {
         // (optional) Do something after API prompt dismissed.
         if (response == "granted") {
           console.log("Device permission granted!");
+          if (!shakeListenerExists) {
           shakeListener();
+          };
         }
       })
       .catch(console.error);
